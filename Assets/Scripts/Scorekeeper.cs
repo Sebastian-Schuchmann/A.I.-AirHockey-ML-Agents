@@ -22,6 +22,6 @@ public class Scorekeeper : MonoBehaviour
 
     private void Display()
     {
-        GetComponent<TextMeshProUGUI>().text = $"{redScore} - {blueScore}";
+        GetComponent<TextMeshProUGUI>().text = $"{blueScore} - {redScore}";
     }
 }

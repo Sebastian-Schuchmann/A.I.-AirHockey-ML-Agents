@@ -17,6 +17,7 @@ public class Puck : MonoBehaviour
     {
         startPosition = transform.position;
         rb = GetComponent<Rigidbody>();
+       
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -45,7 +46,7 @@ public class Puck : MonoBehaviour
 
     private void Respawn()
     {
-        transform.position = new Vector3(startPosition.x + UnityEngine.Random.Range(-2f, 2f), startPosition.y, startPosition.z + Random.Range(-1f, 1f));
+        transform.position = new Vector3(startPosition.x, startPosition.y, startPosition.z);
         rb.velocity = Vector3.zero;
     }
 }

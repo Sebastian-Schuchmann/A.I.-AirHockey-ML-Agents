@@ -9,6 +9,8 @@ public class AirhockeyAgent : Agent
     public float speed = 4f;
     private Rigidbody rb;
     public Transform puck;
+
+    public float randomSpawnRadius = 1f;
     private Vector3 startPosition;
 
     public override void Initialize()
@@ -39,7 +41,7 @@ public class AirhockeyAgent : Agent
 
     public override void OnEpisodeBegin()
     {
-        transform.position = new Vector3(startPosition.x + Random.Range(-2f, 2f), startPosition.y, startPosition.z + Random.Range(-1f, 1f));
+        transform.position = new Vector3(startPosition.x + Random.Range(-randomSpawnRadius, randomSpawnRadius), startPosition.y, startPosition.z + Random.Range(-randomSpawnRadius, randomSpawnRadius));
         rb.velocity = Vector3.zero;
     }
 }
